@@ -84,4 +84,24 @@ module.exports = listOfAudio = [
         path: "vela_irukku.mp3",
         author: "Sriram",
     },
+    {
+        tag: "kaipulla_hello",
+        path: "kaipulla_hello.mp3",
+        author: "Subu",
+    },
+    {
+        tag: "panni_moonji_vaaya",
+        path: "panni_moonji_vaaya.mp3",
+        author: "Satish",
+    },
+    {
+        tag: "poda_panni",
+        path: "poda_panni.mp3",
+        author: "Sriram",
+    },
+    {
+        tag: "thiruttu_paiya",
+        path: "thiruttu_paiya.mp3",
+        author: "Lokesh",
+    },
 ]

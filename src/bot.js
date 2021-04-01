@@ -8,6 +8,15 @@ const bot = new Client();
 
 bot.on('ready',() => {
     console.log('Ref_bot online!!');
+    bot.user.setStatus('dnd');
+    bot.user.setActivity('Game');
+    bot.user.setPresence({
+        game: {
+            name: 'with depression',
+            type: "STREAMING",
+            url: "https://www.twitch.tv/monstercat"
+        }
+    });
 });
 
 bot.on('message', async (message) => {

@@ -2,13 +2,13 @@ const {Client, Message, TextChannel} = require('discord.js');
 const listOfAudio = require('../audList');
 
 // `this is the of the list of dialogues:`
-var helpContent=`this is the of the list of dialogues:\n`;
+var helpContent=`This is the of the list of dialogues available:\n`;
 
 for(var i=0;i<listOfAudio.length;i++){
-    helpContent+=`
-        ${i+1}: ${listOfAudio[i].tag} by ${listOfAudio[i].author} 
-    `
+    helpContent+=`  ${i+1}: \`\`${listOfAudio[i].tag}\`\` by ${listOfAudio[i].author} \n`
 }
+
+helpContent+='\nYou can also use the \`\`pause\`\` , \`\`play\`\` and \`\`stop\`\` commands to their respective tasks'
 
 module.exports =  ref_controller = async (message, args, bot) => {
     if(args[0]){
@@ -32,15 +32,15 @@ module.exports =  ref_controller = async (message, args, bot) => {
             }
 
             if(args[0]=='pause'){
-                console.log('se');
-                dispatcher.pause();
+                const connection = await message.member.voice.channel.join();
+                connection.dispatcher.pause();
             } 
             else if(args[0]=='stop'){
                 message.member.voice.channel.leave();
             }
             else if(args[0]=='play'){
-                console.log('ay');
-                dispatcher.resume();
+                const connection = await message.member.voice.channel.join();
+                connection.dispatcher.resume();
             }
             else if(!exist){
                 message.reply("The tag does not exist!");
