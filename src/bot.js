@@ -6,6 +6,8 @@ const ref_controller = require('./commands');
 
 const bot = new Client();
 
+const tag_replies=["Don't disturb me from my slumber for this pls :confounded:","Damn nibba leave me alone","What the hell do you want","Don't tag me fucker","Get a life, leave me alone"]
+
 bot.on('ready',() => {
     console.log('Ref_bot online!!');
     bot.user.setStatus('dnd');
@@ -21,6 +23,9 @@ bot.on('ready',() => {
 
 bot.on('message', async (message) => {
     if(message.author.bot) return;
+    if(message.mentions.users.find(user => user.id==bot.user.id)){
+        message.reply(tag_replies[Math.floor(Math.random()*tag_replies.length)]);
+    }
     if(message.content.startsWith('$')){
         const [ cmd , ...args ] = message.content
         .trim()
