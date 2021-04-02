@@ -22,6 +22,7 @@ module.exports =  ref_controller = async (message, args, bot) => {
             for(var i=0;i<listOfAudio.length;i++){
                 if(listOfAudio[i].tag==args[0]){
                     exist=true;
+                    message.react('👍');
                     const connection = await message.member.voice.channel.join();
                     dispatcher = await connection.play('./audio/'+listOfAudio[i].path);
                     dispatcher.setVolume(1);
@@ -32,22 +33,28 @@ module.exports =  ref_controller = async (message, args, bot) => {
             }
 
             if(args[0]=='pause'){
+                message.react('👍');
                 const connection = await message.member.voice.channel.join();
                 connection.dispatcher.pause();
             } 
             else if(args[0]=='stop'){
+                message.react('😔');
+                message.react('👍');
                 message.member.voice.channel.leave();
             }
             else if(args[0]=='play'){
+                message.react('👍');
                 const connection = await message.member.voice.channel.join();
                 connection.dispatcher.resume();
             }
             else if(!exist){
+                message.react('😒');
                 message.reply("The tag does not exist!");
             }
         }
         else{
             if(args[0]!='help'){
+                message.react('👍');
                 message.reply("You must be in a voice channel to call the command!");
             }
         }
