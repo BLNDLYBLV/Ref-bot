@@ -54,7 +54,7 @@ module.exports =  ref_controller = async (message, args, bot) => {
         }
         else{
             if(args[0]!='help'){
-                message.react('👍');
+                message.react('👎');
                 message.reply("You must be in a voice channel to call the command!");
             }
         }
