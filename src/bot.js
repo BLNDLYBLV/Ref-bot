@@ -19,6 +19,16 @@ Yours sadly,
 Ref_bot
 `
 
+const newcmds = `My master added 5 new audio tags
+- \`\`enna_enna\`\`
+- \`\`kadal_neerum\`\`
+- \`\`kurukka_indha\`\`
+- \`\`nenachen_da\`\`
+- \`\`en_neram\`\`
+You can always get every tags with the \`\`help\`\` tag
+Orz master blndlyblv
+`
+
 bot.on('ready',() => {
     console.log('Ref_bot online!!');
     bot.user.setStatus('dnd');
@@ -30,6 +40,19 @@ bot.on('ready',() => {
             url: "https://www.twitch.tv/monstercat"
         }
     });
+    bot.guilds.cache.forEach((guild)=>{
+        var f=0;
+        guild.channels.cache.forEach((channel)=>{
+            if(channel.guild.name==guild.name && channel.type=='text'){
+                if(f!=1){
+                    channel.send(newcmds);
+                    f=1;
+                }
+            }
+        });
+    });
+
+    console.log();
 });
 bot.on('guildCreate',(guild)=>{
     var f=0;

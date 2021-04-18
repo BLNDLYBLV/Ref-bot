@@ -191,7 +191,7 @@ module.exports = listOfAudio = [
     },
     {
         tag: "surprise_mf",
-        path: "surprise_mf.mp3",
+        path: "surprise-mf.mp3",
         author: "Sriram",
     },
     {
@@ -244,4 +244,30 @@ module.exports = listOfAudio = [
         path: "it_is_time.mp3",
         author: "Gokulan",
     },
+    {
+        tag: "enna_enna",
+        path: "enna_enna.mp3",
+        author: "Sushil",
+    },
+    {
+        tag: "kurukka_indha",
+        path: "kurukka_indha.mp3",
+        author: "Chinna Thala",
+    },
+    {
+        tag: "kadal_neerum",
+        path: "kadal_neerum.mp3",
+        author: "Chinna Thala",
+    },
+    {
+        tag: "nenachen_da",
+        path: "nenachen_da.mp3",
+        author: "Chinna Thala",
+    },
+    {
+        tag: "en_neram",
+        path: "en_neram.mp3",
+        author: "Sriram",
+    },
+    
 ]
