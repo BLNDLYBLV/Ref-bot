@@ -269,5 +269,14 @@ module.exports = listOfAudio = [
         path: "en_neram.mp3",
         author: "Sriram",
     },
-    
+    {
+        tag: "x",
+        path: "discord_call.mp3",
+        author: "Lokesh",
+    },
+    {
+        tag: "t",
+        path: "teams_call.mp3",
+        author: "Gokulan",
+    }
 ]

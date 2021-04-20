@@ -2,18 +2,28 @@ const {Client, Message, TextChannel} = require('discord.js');
 const listOfAudio = require('../audList');
 
 // `this is the of the list of dialogues:`
-var helpContent=`This is the of the list of dialogues available:\n`;
+var helpContent=[`This is the of the list of dialogues available:\n`];
 
 for(var i=0;i<listOfAudio.length;i++){
-    helpContent+=`  ${i+1}: \`\`${listOfAudio[i].tag}\`\` by ${listOfAudio[i].author} \n`
+    helpContent.push(`${i+1}: \`\`${listOfAudio[i].tag}\`\` by ${listOfAudio[i].author} `);
 }
 
-helpContent+='\nYou can also use the \`\`pause\`\` , \`\`play\`\` and \`\`stop\`\` commands to their respective tasks'
-
+helpContent.push('\nYou can also use the \`\`pause\`\` , \`\`play\`\` and \`\`stop\`\` commands to their respective tasks\n');
+helpContent.push('To add more fun audios fill this google form: https://forms.gle/td9xDeuKCv2mArbj7 \n');
+helpContent.push('To add me to other servers use this link: https://discord.com/oauth2/authorize?client_id=826563255748263947&scope=bot \n');
 module.exports =  ref_controller = async (message, args, bot) => {
     if(args[0]){
         if(args[0]=='help'){
-            message.author.send(helpContent);
+            for(var i=0;i<helpContent.length/20+1;i++){
+                var part=''
+                for(var j=0;j<20;j++){
+                    if((i==helpContent.length/20 && j==helpContent.length%20) && !helpContent[(20*i)+j]) {
+                        break;
+                    }
+                    part+=helpContent[(20*i)+j]+'\n';
+                }
+                message.author.send(part);
+            }
             return;
         }
         if(message.member.voice.channel){

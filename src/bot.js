@@ -13,21 +13,25 @@ You can use my references using \`\`$r <ref_tag>\`\`
 
 I also have a help function, \`\`$r help\`\` and it gets you to my DMs😘
 
+To add more fun audios fill this google form: https://forms.gle/td9xDeuKCv2mArbj7
+
+To add me to other servers use this link: https://discord.com/oauth2/authorize?client_id=826563255748263947&scope=bot
+
 Have fun!!
 
 Yours sadly,
 Ref_bot
 `
 
-const newcmds = `My master added 5 new audio tags
-- \`\`enna_enna\`\`
-- \`\`kadal_neerum\`\`
-- \`\`kurukka_indha\`\`
-- \`\`nenachen_da\`\`
-- \`\`en_neram\`\`
-You can always get every tags with the \`\`help\`\` tag
-Orz master blndlyblv
-`
+// const newcmds = `My master added 5 new audio tags
+// - \`\`enna_enna\`\`
+// - \`\`kadal_neerum\`\`
+// - \`\`kurukka_indha\`\`
+// - \`\`nenachen_da\`\`
+// - \`\`en_neram\`\`
+// You can always get every tags with the \`\`help\`\` tag
+// Orz master blndlyblv
+// `
 
 bot.on('ready',() => {
     console.log('Ref_bot online!!');
@@ -40,19 +44,19 @@ bot.on('ready',() => {
             url: "https://www.twitch.tv/monstercat"
         }
     });
-    bot.guilds.cache.forEach((guild)=>{
-        var f=0;
-        guild.channels.cache.forEach((channel)=>{
-            if(channel.guild.name==guild.name && channel.type=='text'){
-                if(f!=1){
-                    channel.send(newcmds);
-                    f=1;
-                }
-            }
-        });
-    });
+    // bot.guilds.cache.forEach((guild)=>{
+    //     var f=0;
+    //     guild.channels.cache.forEach((channel)=>{
+    //         if(channel.guild.name==guild.name && channel.type=='text'){
+    //             if(f!=1){
+    //                 channel.send(newcmds);
+    //                 f=1;
+    //             }
+    //         }
+    //     });
+    // });
 
-    console.log();
+    // console.log();
 });
 bot.on('guildCreate',(guild)=>{
     var f=0;
