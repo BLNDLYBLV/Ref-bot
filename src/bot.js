@@ -23,14 +23,11 @@ Yours sadly,
 Ref_bot
 `
 
-// const newcmds = `My master added 5 new audio tags
-// - \`\`enna_enna\`\`
-// - \`\`kadal_neerum\`\`
-// - \`\`kurukka_indha\`\`
-// - \`\`nenachen_da\`\`
-// - \`\`en_neram\`\`
+// const newcmds = `My master added 1 new audio tag
+// - \`\`i_am_hacker\`\`
 // You can always get every tags with the \`\`help\`\` tag
-// Orz master blndlyblv
+// To add more fun audios fill this google form: https://forms.gle/td9xDeuKCv2mArbj7
+// master blndlyblv Orz
 // `
 
 bot.on('ready',() => {
@@ -56,7 +53,6 @@ bot.on('ready',() => {
     //     });
     // });
 
-    // console.log();
 });
 bot.on('guildCreate',(guild)=>{
     var f=0;
