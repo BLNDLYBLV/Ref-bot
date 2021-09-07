@@ -283,5 +283,10 @@ module.exports = listOfAudio = [
         tag: "i_am_hacker",
         path: "i_am_hacker.mp3",
         author: "Lokesh",
+    },
+    {
+        tag: "sooth_soup",
+        path: "sooth_soup.mp3",
+        author: "Bladerunner",
     }
 ]
